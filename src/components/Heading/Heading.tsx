@@ -1,7 +1,7 @@
-type HeadingProps = {
-  children: React.ReactNode;
-};
+import { ComponentProps } from "react";
 
-export const Heading = ({ children }: HeadingProps) => {
-  return <h1>{children}</h1>;
+type HeadingProps = ComponentProps<"h1">;
+
+export const Heading = ({ ...rest }: HeadingProps) => {
+  return <h1 {...rest} />;
 };
