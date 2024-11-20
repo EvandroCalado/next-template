@@ -27,6 +27,7 @@ jobs:
   analyze:
     runs-on: ubuntu-latest
     env:
+      CI: true
       BUNDLEWATCH_GITHUB_TOKEN: ${{ secrets.BUNDLEWATCH_GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v4
